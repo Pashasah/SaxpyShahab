@@ -67,8 +67,8 @@ from saxpy.sax import sax_by_chunking
 
 def test_chunking():
     """Test SAX by chunking."""
-    dat1 = np.array([2.02, 2.33, 2.99, 6, 5.85,
-                     3.85, 4.85, 3.85, 2.22, 1.45, 1.34])
+    dat1 = np.array([2.02, -2.33, 2.99, 6, 5.85,20.02, -12.33, 6.99, 16, 8.05,
+                     3.85, -4.85, 3.85, 2.2, 1.45, 1.34, -12.33, 6.99])
 
     dats1_9_7 = "bcggfddba"
     dats1_10_11 = "bcjkjheebb"
@@ -85,9 +85,9 @@ def test_chunking():
     dats2_10_11 = "bcefgijkcb"
     dats2_14_10 = "abdeeffhijjfbb"
 
-    assert dats2_9_7 == sax_by_chunking(dat2, 9, 7)
+    assert dats2_9_7 == sax_by_chunking(dat2, 8, 7)
     assert dats2_10_11 == sax_by_chunking(dat2, 10, 11)
-    assert dats2_14_10 == sax_by_chunking(dat2, 14, 10)
+    assert dats2_14_10 == sax_by_chunking(dat2, 12, 10)
     
     
     
