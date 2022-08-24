@@ -85,7 +85,7 @@ def test_chunking():
     dats2_10_11 = "bcefgijkcb"
     dats2_14_10 = "abdeeffhijjfbb"
 
-    assert dats2_9_7 == sax_by_chunking(dat2, 8, 7)
+    assert dats2_9_7 == sax_by_chunking(dat2, 8, 3)
     assert dats2_10_11 == sax_by_chunking(dat2, 10, 11)
     assert dats2_14_10 == sax_by_chunking(dat2, 12, 10)
     
